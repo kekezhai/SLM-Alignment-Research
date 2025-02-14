@@ -1,1 +1,9 @@
 # SLM-Alignment-Research
+
+## 介绍
+- **基于小型语言模型的后训练持续优化方法**
+
+本文主要探索了小型语言模型的后训练持续优化方法，提出了一种针对小型语言模型的持续后训练对齐数据构建方法。该方法的核心是基于大模型的数据指导，优化了对齐数据的多样性和准确率，同时兼顾了模型的生成安全性。此外，为了验证本文方法的有效性，我们使用Qwen2-0.5B-Instruction作为SLM底座模型，并使用该方法构建的数据集进行了SFT后训练实验和KTO后训练实验，以及SFT-KTO两阶段实验和模型权重融合实验。最后，我们使用benchmark测试集对后训练模型进行了评估及分析，验证了持续后训练对于提升小型语言模型性能的效果。详见论文: [A Post-Training Enhanced Optimization Approach for Small Language Models](https://arxiv.org/abs/2411.02939)
+
+## 模型地址
+[Qwen2-0.5B-Instruct-S1](https://www.modelscope.cn/models/kkzhai/Qwen2-0.5B-Instruct-S1)
