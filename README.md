@@ -11,11 +11,10 @@
 ### 模型训练
 ```
 安装LLaMA-Factory：
-  git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
-  cd LLaMA-Factory
-  pip install -e ".[torch,metrics]"
-执行训练脚本：
-  sh train.sh
+   git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
+   cd LLaMA-Factory
+   pip install -e ".[torch,metrics]"
+执行训练脚本：sh train.sh
 ```
 
 ### 模型评估
@@ -38,6 +37,6 @@ git clone https://github.com/openai/human-eval ./Evaluation_DataSets/human-eval
 pip install -e ./Evaluation_DataSets/human-eval
 
 python ./eval/test_evaluate_chat_humaneval.py -f ./Evaluation_DataSets/HumanEval/raw/human-eval/data/HumanEval.jsonl -c Qwen2-0.5B-Instruct-S1模型目录 -o ./HumanEval_Qwen2-0.5B-Instruct-S1_res.jsonl
-```
 
 evaluate_functional_correctness ./HumanEval_Qwen2-0.5B-Instruct-S1_res.jsonl
+```
