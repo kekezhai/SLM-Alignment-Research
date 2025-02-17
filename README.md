@@ -9,9 +9,11 @@
 [Qwen2-0.5B-Instruct-S1](https://www.modelscope.cn/models/kkzhai/Qwen2-0.5B-Instruct-S1)
 
 ### 模型训练
+```
 git clone https://github.com/hiyouga/LLaMA-Factory.git
 
 sh train.sh
+```
 
 ### 模型评估
 pip install -r ./eval/requirements.txt
