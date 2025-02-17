@@ -10,9 +10,12 @@
 
 ### 模型训练
 ```
-git clone https://github.com/hiyouga/LLaMA-Factory.git
-
-sh train.sh
+安装LLaMA-Factory：
+  git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
+  cd LLaMA-Factory
+  pip install -e ".[torch,metrics]"
+执行训练脚本：
+  sh train.sh
 ```
 
 ### 模型评估
