@@ -7,3 +7,26 @@
 
 ## 模型地址
 [Qwen2-0.5B-Instruct-S1](https://www.modelscope.cn/models/kkzhai/Qwen2-0.5B-Instruct-S1)
+
+###模型训练
+git clone https://github.com/hiyouga/LLaMA-Factory.git
+sh train.sh
+
+###模型评估
+pip install -r ./eval/requirements.txt
+
+python ./eval/test_evaluate_chat_gsm8k.py --use-fewshot -f ./Evaluation_DataSets/gsm8k -c Qwen2-0.5B-Instruct-S1模型目录  -o gsm8k_4shot_Qwen2-0.5B-Instruct-S1_res.jsonl 
+
+python ./eval/test_evaluate_chat_mmlu.py -d ./Evaluation_DataSets/mmlu/data -c Qwen2-0.5B-Instruct-S1模型目录  
+
+python ./eval/test_evaluate_chat_cmmlu.py -d ./Evaluation_DataSets/cmmlu/data -c Qwen2-0.5B-Instruct-S1模型目录  
+
+python ./eval/test_evaluate_chat_ceval.py -d ./Evaluation_DataSets/ceval/data -c Qwen2-0.5B-Instruct-S1模型目录  
+
+###HumanEval安装及评估
+git clone https://github.com/openai/human-eval ./Evaluation_DataSets/human-eval
+pip install -e ./Evaluation_DataSets/human-eval
+
+python ./eval/test_evaluate_chat_humaneval.py -f ./Evaluation_DataSets/HumanEval/raw/human-eval/data/HumanEval.jsonl -c Qwen2-0.5B-Instruct-S1模型目录 -o ./HumanEval_Qwen2-0.5B-Instruct-S1_res.jsonl
+
+evaluate_functional_correctness ./HumanEval_Qwen2-0.5B-Instruct-S1_res.jsonl

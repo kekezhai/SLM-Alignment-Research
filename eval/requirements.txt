@@ -1,0 +1,9 @@
+transformers>=4.41.2,<=4.46.1
+datasets>=2.16.0,<=3.1.0
+torch
+numpy
+pandas
+thefuzz
+
+
+
