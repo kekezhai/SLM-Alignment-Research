@@ -1,0 +1,18 @@
+displayName: HumanEval
+license:
+  - MIT
+taskTypes:
+  - Image Classification
+  - Code Generation
+  - Program Synthesis
+mediaTypes:
+  - Text
+labelTypes: []
+tags: []
+publisher:
+  - OpenAI
+  - Anthropic AI
+  - Zipline
+publishDate: '2021-07-01'
+publishUrl: https://github.com/openai/human-eval
+paperUrl: ''
