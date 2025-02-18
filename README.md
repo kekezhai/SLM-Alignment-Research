@@ -43,5 +43,10 @@ evaluate_functional_correctness ./HumanEval_Qwen2-0.5B-Instruct-S1_res.jsonl
 
 ### 模型使用
 ```
-执行 ./model_test1.py或者./model_test2.py
+执行 ./test/model_test1.py 或者 ./test/model_test2.py
+```
+
+### 模型融合方法
+```
+参考 ./merge_method/model_weight_merge1.py 和 ./merge_method/model_weight_merge2.py
 ```
